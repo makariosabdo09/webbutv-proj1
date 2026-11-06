@@ -1,11 +1,17 @@
 body{
     background-color: aqua;
-    color: blueviolet;
+    color: #8a2be2;
+    font-family:  Georgia, Helvetica, sans-serif;
 }
 
 h1{
-    background-color: rgba(200,20,200,0.05);
+    background-color: rgba(200, 20, 200, 0.185);
+    font-family:  Helvetica, Arial, sans-serif;
     
+}
+h2{
+    background-color: rgba(200, 20, 200, 0.185);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 

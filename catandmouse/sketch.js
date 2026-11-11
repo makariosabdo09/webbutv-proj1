@@ -51,6 +51,11 @@ function draw() {
     //Rita ut grafiken
     fill("black");
     circle(catX, catY, catSize);
+    triangle(catX-catSize/3, catY-catSize/3, catX, catY-catSize/3, catX-catSize/4, catY-3*catSize/4); 
+    triangle(catX+catSize/3, catY-catSize/3, catX, catY-catSize/3, catX+catSize/4, catY-3*catSize/4);
+    fill("red");
+    triangle(catX-catSize/6, catY, catX-catSize/12, catY-catSize/8, catX-catSize/3, catY-catSize/6);
+    triangle(catX+catSize/6, catY, catX+catSize/12, catY-catSize/8, catX+catSize/3, catY-catSize/6);
     
     // Musstyrning
     fill('brown');

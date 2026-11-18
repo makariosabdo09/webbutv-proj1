@@ -1,12 +1,13 @@
-let carX=50;
-let carY=50;
-let carSize=100;
-let carSpeed=2;
+let carX=250;
+let carY=500;
+let carH=100;
+let carW=50;
+let carSpeed=5;
 
 let gameState="START";
 
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(500, 650);     
     // Help blind or low-vision users understand your sketch
     describe("A 400 by 400 pixel gray canvas.");
 }
@@ -14,7 +15,6 @@ function setup() {
   
 function draw() {
   background(220);
- 
     
   if(gameState=="START"){
     //Rita upp startsida
@@ -25,21 +25,19 @@ function draw() {
     text("Tryck på SPACE för att starta", width/2, 200);
   } else if(gameState=="PLAY"){
     //Spela spelet
+
+    // Rita bilen
+    fill('red');
+    rect(carX,carY,carW,carH);  
+
     //Tangentborddstyrning
-    if(keyIsDown("a")){
+    if(keyIsDown(LEFT_ARROW)){
       carX=carX-carSpeed;
     }
     if(keyIsDown(RIGHT_ARROW)){
-      car=carX+carSpeed;
+      carX=carX+carSpeed;
     }
-    if(keyIsDown(UP_ARROW)){
-      carY=carY-carSpeed;
-    }
-    if(keyIsDown(DOWN_ARROW)){
-      carY=carY+carSpeed;
-    } 
 
-    rect(50,50,carW,carH);  
   }
 }
 

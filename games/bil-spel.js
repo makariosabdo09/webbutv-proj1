@@ -4,14 +4,21 @@ let carH=100;
 let carW=50;
 let carSpeed=5;
 
+let carBlueX;
+let carBlueY=0;
+let carBlueH=100;
+let carBlueW=50;
+let carBlueSpeed=4;
+
 let gameState="START";
 
 function setup() {
     createCanvas(500, 650);     
     // Help blind or low-vision users understand your sketch
     describe("A 400 by 400 pixel gray canvas.");
+    carBlueX= floor (random(100));
 }
-
+   slumptal = floor (random(0,100));
   
 function draw() {
   background(220);
@@ -29,6 +36,9 @@ function draw() {
     // Rita bilen
     fill('red');
     rect(carX,carY,carW,carH);  
+    fill('blue');
+    rect(carBlueX,carBlueY,carBlueW,carBlueH);  
+
 
     //Tangentborddstyrning
     if(keyIsDown(LEFT_ARROW)){
@@ -38,6 +48,11 @@ function draw() {
       carX=carX+carSpeed;
     }
 
+  }
+  carBlueY=carBlueY+4
+  if (carBlueY>height){
+    carBlueY= 0
+    carBlueX = random(width);
   }
 }
 
